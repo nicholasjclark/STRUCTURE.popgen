@@ -41,7 +41,7 @@ STRUCTURE.popgen=function(qmatrix=NULL,allele.dat,nclusters,
                          type="codom")
 
     if(stat=="summary"){
-      Mydata2 <- genind2hierfstat(Mydata1,pop=rep(1,nrow(allele.dat)))
+      Mydata2 <- genind2hierfstat(Mydata1,pop = rep(1, nrow(allele.dat)))
       summ.stats <- basic.stats(Mydata2, diploid = TRUE, digits = 2)
       output=list(locus.stats = summ.stats$perloc[,c(1:3,9)],
                   average.stats = summ.stats$overall[c(1:3,9)])
